@@ -27,17 +27,17 @@ int a=0,b=1,c=2,d=3;
 int f0=0,f1=0,f2=0,f3=0,f4=0,f5=0,f6=0;
 int t[8]={0};
 int col;
-char Cover[25]="Cover.bmp";
-char Pic1[25]="Pic1.bmp";
-char Pic2[25]="Pic2.bmp";
-char highscore[25]="highscore.bmp";
-char EnterName[25]="EnterName.bmp";
-char Gameover[25]="Gameover.bmp";
-char Play[25]="Play.bmp";
-char Rules[25]="Rules.PNG";
-char Joker[25]="Joker.bmp";
-char Music[25]="music.png";
-char power[25]="power.jpg";
+char Cover[25]="assests\\Cover.bmp";
+char Pic1[25]="assests\\Pic1.bmp";
+char Pic2[25]="assests\\Pic2.bmp";
+char highscore[25]="assests\\highscore.bmp";
+char EnterName[25]="assests\\EnterName.bmp";
+char Gameover[25]="assests\\Gameover.bmp";
+char Play[25]="assests\\Play.bmp";
+char Rules[25]="assests\\Rules.PNG";
+char Joker[25]="assests\\Joker.bmp";
+char Music[25]="assests\\music.png";
+char power[25]="assests\\power.jpg";
 int gameState =0,gamelevel=0;
 int Level;
 int score=0,high=0;
@@ -129,12 +129,12 @@ iSetColor(255,255,255);
 	iShowBMP(0,0,Cover);
 	if(gameState==1){
 	iShowBMP(0,0,Pic1);
-    iShowBMP(715,348,"music.png");
-	iShowBMP(24,348,"power.jpg");
+    iShowBMP(715,348,"D:\\1-1\\CSE102\\Igraphics\\TETRIS CLONE _ MAIN\\assests\\music.png");
+	iShowBMP(24,348,"D:\\1-1\\CSE102\\Igraphics\\TETRIS CLONE _ MAIN\\assests\\power.jpg");
 	}
 	 if(gameState==2){
-	  iShowBMP(610,0,"Joker.bmp");
-      iShowBMP(668,394,"power.jpg");
+	  iShowBMP(610,0,"D:\\1-1\\CSE102\\Igraphics\\TETRIS CLONE _ MAIN\\assests\\Joker.bmp");
+      iShowBMP(668,394,"D:\\1-1\\CSE102\\Igraphics\\TETRIS CLONE _ MAIN\\assests\\power.jpg");
 	 }
 	if(gameState==2){
 	iText(630,200, "Score : ", GLUT_BITMAP_TIMES_ROMAN_24);
@@ -439,7 +439,7 @@ void iMouse(int button, int state, int mx, int my)
 			else
 			{
 				music = true;
-				PlaySound("audio.wav", NULL, SND_LOOP | SND_ASYNC);
+				PlaySound("D:\\1-1\\CSE102\\Igraphics\\TETRIS CLONE _ MAIN\\assests\\audio.wav", NULL, SND_LOOP | SND_ASYNC);
 			} 
 		}
 		if(mx>=23 && mx<=74 && my>=350 && my<=400 && gameState==1){
@@ -968,7 +968,7 @@ int main()
 	 iSetTimer(3000, cover);
 
     if(music)
-	PlaySound("audio.wav", NULL, SND_LOOP | SND_ASYNC);
+	PlaySound("D:\\1-1\\CSE102\\Igraphics\\TETRIS CLONE _ MAIN\\assests\\audio.wav", NULL, SND_LOOP | SND_ASYNC);
 	//else PlaySound(0,0,0);
 	
 	// place your own initialization codes here.
